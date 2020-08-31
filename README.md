@@ -1,6 +1,6 @@
 # Proyecto: Tienda 🛍
 
-![Design preview for the Base Apparel coming soon page coding challenge](./imagenes/Captura de pantalla 2020-08-31 a la(s) 16.08.11.jpg)
+![Design preview for the Base Apparel coming soon page coding challenge](./imagenes/proyecto-imagen.jpg)
 
 ## Bienvenidos! 👋
 
