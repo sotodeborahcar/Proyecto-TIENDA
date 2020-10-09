@@ -15,6 +15,11 @@ body {
   position: relative;
   font-family: "Montserrat", sans-serif;
 }
+
+html,
+body {
+  height: 100%;
+}
 /* seccion header */
 .main-header {
   width: 100%;
@@ -49,6 +54,9 @@ img {
   /* margin-left: 10px; */
   line-height: 20px;
 }
+.fa-shopping-cart {
+  color: #ba3966;
+}
 button {
   border: 0;
   /* elimino el color del fondo del icono del carrito */
@@ -73,18 +81,65 @@ button {
 h1 {
   color: white;
 }
+h1,
+h2 {
+  margin: 0;
+}
 
 /* 👻seccion principal */
 main {
   display: flex;
-  flex-grow: 1;
-  width: 100%;
+  /* flex-grow: 1;
+  width: 100%; */
   margin-top: 80px;
-  max-width: 1400px;
+  /* max-width: 1400px; */
 }
-.aside {
-  width: 20%;
+/* seccion aside-filtros */
+.filters {
+  max-width: 270px;
+  font-size: 12px;
+  font-weight: 600;
 }
+label {
+  display: flex;
+  align-items: center;
+  height: 1.8em;
+}
+.filters label input {
+  margin-right: 10px;
+}
+.filter-container {
+  padding: 0 35px 15px;
+}
+.filter-container-main {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.filter-clear {
+  padding: 0;
+}
+.input-search {
+  height: 40px;
+  width: 400px;
+  padding: 0 20px;
+  border: 0;
+  background-color: transparent;
+  border-bottom: 2px solid grey;
+}
+.fa-search {
+  font-size: 1.3em;
+  margin-left: 1em;
+  position: absolute;
+  right: 1em;
+  /* top: 50%; */
+  transform: translateY(-10%);
+}
+
+.stars {
+  margin-right: 5px;
+}
+
 /* .article {
   width: 80%;
 } */
@@ -182,7 +237,7 @@ footer {
 .logo-footer {
   display: flex;
 }
-.logo {
+/* .logo {
   width: 25px;
   margin-right: 10px;
-}
+} */
