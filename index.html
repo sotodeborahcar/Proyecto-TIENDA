@@ -61,59 +61,66 @@
 
           <div class="filter-container busqueda">
             <h3 class="filter-name-question">BÚSQUEDA</h3>
-            <label for="">
+            <label for="input-search">
               <input
+                id="filtro"
                 class="input-search"
                 type="text"
                 name="Busqueda"
                 placeholder="Buscar productos"
+                aria-label="Escriba el nombre del producto que busca"
               />
-              <i class="fas fa-search"></i>
+              <i class="fas fa-search" aria-hidden="true"></i>
             </label>
           </div>
 
           <div class="filter-container categoria">
-            <h3 class="filteer-name">CATEGORIA</h3>
-            <label for="">
+            <h3
+              class="filter-name"
+              aria-label="Filtrar productos por categoria"
+            >
+              CATEGORIA
+            </h3>
+            <label for="consolas">
               <input
                 type="checkbox"
-                name="categoria"
+                name="category"
                 value="consolas"
                 class="filter filter-category"
               />
               CONSOLAS
             </label>
-            <label for="">
+            <label for="notebooks">
               <input
                 type="checkbox"
-                name="categoria"
+                name="category"
                 value="notebook"
                 class="filter filter-category"
               />
               NOTEBOOKS
             </label>
-            <label for="">
+            <label for="camaras">
               <input
                 type="checkbox"
-                name="categoria"
+                name="category"
                 value="camara"
                 class="filter filter-category"
               />
               CÁMARAS
             </label>
-            <label for="">
+            <label for="celulares">
               <input
                 type="checkbox"
-                name="categoria"
+                name="category"
                 value="celulares"
                 class="filter filter-category"
               />
               CELULARES
             </label>
-            <label for="">
+            <label for="accesorios">
               <input
                 type="checkbox"
-                name="categoria"
+                name="category"
                 value="accesorios"
                 class="filter filter-category"
               />
@@ -122,39 +129,44 @@
           </div>
 
           <div class="filter-container puntaje">
-            <h3 class="filter-name">PUNTAJE</h3>
+            <h3
+              class="filter-name"
+              aria-label="Filtrar productos por cantidad de estrellas, de uno a cinco"
+            >
+              PUNTAJE
+            </h3>
 
             <label for="5-stars">
               <input
                 type="checkbox"
-                name="five-stars"
+                name="stars"
                 value="5"
                 id="5-stars"
                 class="filter start-filter"
               />
               <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
               </div>
               <p>(5)</p>
             </label>
             <label for="4-stars">
               <input
                 type="checkbox"
-                name="four-stars"
+                name="stars"
                 value="4"
                 id="4-stars"
                 class="filter start-filter"
               />
               <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="far fa-star" aria-hidden="true"></i>
               </div>
               <p>(4)</p>
             </label>
@@ -162,17 +174,17 @@
             <label for="3-stars">
               <input
                 type="checkbox"
-                name="three-stars"
+                name="stars"
                 value="3"
                 id="3-stars"
                 class="filter start-filter"
               />
               <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-                <i class="far fa-star"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="far fa-star" aria-hidden="true"></i>
+                <i class="far fa-star" aria-hidden="true"></i>
               </div>
               <p>(3)</p>
             </label>
@@ -180,17 +192,17 @@
             <label for="2-stars">
               <input
                 type="checkbox"
-                name="two-stars"
+                name="stars"
                 value="2"
                 id="2-stars"
                 class="filter start-filter"
               />
               <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-                <i class="far fa-star"></i>
-                <i class="far fa-star"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="far fa-star" aria-hidden="true"></i>
+                <i class="far fa-star" aria-hidden="true"></i>
+                <i class="far fa-star" aria-hidden="true"></i>
               </div>
               <p>(2)</p>
             </label>
@@ -198,17 +210,17 @@
             <label for="1-stars">
               <input
                 type="checkbox"
-                name="one-stars"
+                name="stars"
                 value="1"
                 id="1-stars"
                 class="filter start-filter"
               />
               <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-                <i class="far fa-star"></i>
-                <i class="far fa-star"></i>
-                <i class="far fa-star"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="far fa-star" aria-hidden="true"></i>
+                <i class="far fa-star" aria-hidden="true"></i>
+                <i class="far fa-star" aria-hidden="true"></i>
+                <i class="far fa-star" aria-hidden="true"></i>
               </div>
               <p>(1)</p>
             </label>
@@ -219,20 +231,45 @@
       <!-- seccion tarjetas de productos -->
       <section class="article">
         <div class="article-barra">
-          <p class="barra-p-left">Mostrando 12 producto(s) de 12</p>
+          <p class="prod-cantidad" aria-live="mostrar">
+            Mostrando 12 producto(s) de 12
+          </p>
           <div class="barra-dezplegable">
-            <p class="barra-p-rigth">Ver como</p>
+            <p
+              class="barra-p-rigth"
+              aria-label="Cambiar la vista de la lista de productos"
+            >
+              Ver como
+            </p>
             <button type="button" class="btn-desplegable">
-              <i class="fas fa-th"></i>
+              <i class="fas fa-th" aria-hidden="true" title="cuadricula"></i>
             </button>
             <button type="button" class="btn-desplegable">
-              <i class="fas fa-list"></i>
+              <i class="fas fa-list" aria-hidden="true" title="lista"></i>
             </button>
           </div>
+          <button
+            type="button"
+            class="open-boton-filter"
+            aria-label="abrir filtros"
+            aria-expanded="false"
+            aria-controls="filter"
+          >
+            <i class="fas fa-filter" aria-hidden="true"></i>
+            Filtros
+          </button>
         </div>
 
-        <div class="article-products">
-          <article class="product">
+        <div class="article-products art-mosaico">
+          <article
+            class="product"
+            data-id="0"
+            data-name="celular xiaomi"
+            data-category="celulares"
+            data-price="22499"
+            data-image="./imagenes/Celular Xiaomi Redmi Note 8.jpeg"
+            data-star="3"
+          >
             <div class="product-img">
               <img
                 src="./imagenes/Celular Xiaomi Redmi Note 8.jpeg"
@@ -243,99 +280,183 @@
             <div class="product-data">
               <div class="product-content">
                 <h3 class="product-name">Celular Xiaomi</h3>
-                <p class="product-price">$ 22499</p>
+                <p class="product-price" aria-label="precio en pesos">
+                  $ 22499
+                </p>
+                <p class="product-description-list">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Ipsum a sunt exercitationem eaque quaerat, minus eum animi!
+                  Sed, sapiente quam sequi necessitatibus aliquam itaque
+                  quisquam natus eveniet eligendi voluptatibus quaerat!
+                </p>
                 <div class="product-starts">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star" aria-hidden="true"></i>
+                  <i class="fas fa-star" aria-hidden="true"></i>
+                  <i class="fas fa-star" aria-hidden="true"></i>
+                  <i class="far fa-star" aria-hidden="true"></i>
+                  <i class="far fa-star" aria-hidden="true"></i>
                 </div>
               </div>
               <div class="product-sale">
-                <button type="button" class="button button-sale">
+                <button type="button" class="button button-sale" id="0">
                   COMPRAR
                 </button>
               </div>
             </div>
           </article>
-          <article class="product">
+          <article
+            class="product"
+            data-id="1"
+            data-name="playstation 4"
+            data-category="consolas"
+            data-price="59999"
+            data-image="./imagenes/playstation4.jpg"
+            data-star="5"
+          >
             <div class="product-img">
-              <img src="./imagenes/playstation4.jpg" alt="" class="img" />
+              <img
+                src="./imagenes/playstation4.jpg"
+                alt="consola de videojuegos playstation 4"
+                class="img"
+              />
             </div>
             <div class="product-data">
               <div class="product-content">
                 <h3 class="product-name">PlayStation 4</h3>
                 <p class="product-price">$ 59999</p>
+                <p class="product-description-list">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Ipsum a sunt exercitationem eaque quaerat, minus eum animi!
+                  Sed, sapiente quam sequi necessitatibus aliquam itaque
+                  quisquam natus eveniet eligendi voluptatibus quaerat!
+                </p>
                 <div class="product-starts">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star" aria-hidden="true"></i>
+                  <i class="fas fa-star" aria-hidden="true"></i>
+                  <i class="fas fa-star" aria-hidden="true"></i>
+                  <i class="fas fa-star" aria-hidden="true"></i>
+                  <i class="fas fa-star" aria-hidden="true"></i>
                 </div>
               </div>
               <div class="product-sale">
-                <button type="button" class="button button-sale">
+                <button type="button" class="button button-sale" id="1">
                   COMPRAR
                 </button>
               </div>
             </div>
           </article>
-          <article class="product">
+          <article
+            class="product"
+            data-id="2"
+            data-name="camara nikon"
+            data-category="camaras"
+            data-price="54999"
+            data-image="../imagenes/camara Nikon.jpg"
+            data-star="2"
+          >
             <div class="product-img">
-              <img src="./imagenes/camara Nikon.jpg" alt="" class="img" />
+              <img
+                src="./imagenes/camara Nikon.jpg"
+                alt="camara nikon"
+                class="img"
+              />
             </div>
             <div class="product-data">
               <div class="product-content">
                 <h3 class="product-name">Camara Nikon</h3>
-                <p class="product-price">$ 54999</p>
+                <p class="product-price" aria-label="precio en pesos">
+                  $ 54999
+                </p>
+                <p class="product-description-list">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Ipsum a sunt exercitationem eaque quaerat, minus eum animi!
+                  Sed, sapiente quam sequi necessitatibus aliquam itaque
+                  quisquam natus eveniet eligendi voluptatibus quaerat!
+                </p>
                 <div class="product-starts">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star" aria-hidden="true"></i>
+                  <i class="fas fa-star" aria-hidden="true"></i>
+                  <i class="far fa-star" aria-hidden="true"></i>
+                  <i class="far fa-star" aria-hidden="true"></i>
+                  <i class="far fa-star" aria-hidden="true"></i>
                 </div>
               </div>
               <div class="product-sale">
-                <button type="button" class="button button-sale">
+                <button type="button" class="button button-sale" id="2">
                   COMPRAR
                 </button>
               </div>
             </div>
           </article>
-          <article class="product">
+          <article
+            class="product"
+            data-id="3"
+            data-name="headphones sony"
+            data-category="accesorios"
+            data-price="24999"
+            data-image="./imagenes/headphones Sony.jpg"
+            data-star="3"
+          >
             <div class="product-img">
-              <img src="./imagenes/headphones Sony.jpg" alt="" class="img" />
+              <img
+                src="./imagenes/headphones Sony.jpg"
+                alt="auricular sony"
+                class="img"
+              />
             </div>
             <div class="product-data">
               <div class="product-content">
                 <h3 class="product-name">Headphones Sony</h3>
-                <p class="product-price">$ 24999</p>
+                <p class="product-price" aria-label="precio en pesos">
+                  $ 24999
+                </p>
+                <p class="product-description-list">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Ipsum a sunt exercitationem eaque quaerat, minus eum animi!
+                  Sed, sapiente quam sequi necessitatibus aliquam itaque
+                  quisquam natus eveniet eligendi voluptatibus quaerat!
+                </p>
                 <div class="product-starts">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star" aria-hidden="true"></i>
+                  <i class="fas fa-star" aria-hidden="true"></i>
+                  <i class="fas fa-star" aria-hidden="true"></i>
+                  <i class="far fa-star" aria-hidden="true"></i>
+                  <i class="far fa-star" aria-hidden="true"></i>
                 </div>
               </div>
               <div class="product-sale">
-                <button type="button" class="button button-sale">
+                <button type="button" class="button button-sale" id="3">
                   COMPRAR
                 </button>
               </div>
             </div>
           </article>
-          <article class="product">
+          <article
+            class="product"
+            data-id="4"
+            data-name="nintendo switch"
+            data-category="consolas"
+            data-price="46999"
+            data-image="./imagenes/Nintendo Switch.jpg"
+            data-star="5"
+          >
             <div class="product-img">
-              <img src="./imagenes/Nintendo Switch.jpg" alt="" class="img" />
+              <img
+                src="./imagenes/Nintendo Switch.jpg"
+                alt="nintendo switch"
+                class="img"
+              />
             </div>
             <div class="product-data">
               <div class="product-content">
                 <h3 class="product-name">Nintendo Switch</h3>
                 <p class="product-price">$ 46999</p>
+                <p class="product-description-list">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Ipsum a sunt exercitationem eaque quaerat, minus eum animi!
+                  Sed, sapiente quam sequi necessitatibus aliquam itaque
+                  quisquam natus eveniet eligendi voluptatibus quaerat!
+                </p>
                 <div class="product-starts">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
@@ -351,20 +472,38 @@
               </div>
             </div>
           </article>
-          <article class="product">
+          <article
+            class="product"
+            data-id="5"
+            data-name="notebook asus"
+            data-category="notebooks"
+            data-price="32999"
+            data-image="./imagenes/notebook Asus.jpg"
+            data-star="3"
+          >
             <div class="product-img">
-              <img src="./imagenes/notebook Asus.jpg" alt="" class="img" />
+              <img
+                src="./imagenes/notebook Asus.jpg"
+                alt="notebook"
+                class="img"
+              />
             </div>
             <div class="product-data">
               <div class="product-content">
                 <h3 class="product-name">Notebook Asus</h3>
                 <p class="product-price">$ 32999</p>
+                <p class="product-description-list">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Ipsum a sunt exercitationem eaque quaerat, minus eum animi!
+                  Sed, sapiente quam sequi necessitatibus aliquam itaque
+                  quisquam natus eveniet eligendi voluptatibus quaerat!
+                </p>
                 <div class="product-starts">
                   <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <i class="far fa-star"></i>
                 </div>
               </div>
               <div class="product-sale">
@@ -374,20 +513,38 @@
               </div>
             </div>
           </article>
-          <article class="product">
+          <article
+            class="product"
+            data-id="6"
+            data-name="notebook msi"
+            data-category="notebooks"
+            data-price="37999"
+            data-image="./imagenes/notebook MSI.jpg"
+            data-star="3"
+          >
             <div class="product-img">
-              <img src="./imagenes/notebook MSI.jpg" alt="" class="img" />
+              <img
+                src="./imagenes/notebook MSI.jpg"
+                alt="notebook msi"
+                class="img"
+              />
             </div>
             <div class="product-data">
               <div class="product-content">
                 <h3 class="product-name">Notebook MSI</h3>
                 <p class="product-price">$ 37999</p>
+                <p class="product-description-list">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Ipsum a sunt exercitationem eaque quaerat, minus eum animi!
+                  Sed, sapiente quam sequi necessitatibus aliquam itaque
+                  quisquam natus eveniet eligendi voluptatibus quaerat!
+                </p>
                 <div class="product-starts">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <i class="far fa-star"></i>
                 </div>
               </div>
               <div class="product-sale">
@@ -397,11 +554,19 @@
               </div>
             </div>
           </article>
-          <article class="product">
+          <article
+            class="product"
+            data-id="7"
+            data-name="headphones philips"
+            data-category="accesorios"
+            data-price="11999"
+            data-image="./imagenes/Headphones Philips.jpg"
+            data-star="2"
+          >
             <div class="product-img">
               <img
                 src="./imagenes/Headphones Philips.jpeg"
-                alt=""
+                alt="headphones philips"
                 class="img"
               />
             </div>
@@ -409,12 +574,18 @@
               <div class="product-content">
                 <h3 class="product-name">Headphones Philips</h3>
                 <p class="product-price">$ 11999</p>
+                <p class="product-description-list">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Ipsum a sunt exercitationem eaque quaerat, minus eum animi!
+                  Sed, sapiente quam sequi necessitatibus aliquam itaque
+                  quisquam natus eveniet eligendi voluptatibus quaerat!
+                </p>
                 <div class="product-starts">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <i class="far fa-star"></i>
                 </div>
               </div>
               <div class="product-sale">
@@ -424,20 +595,34 @@
               </div>
             </div>
           </article>
-          <article class="product">
+          <article
+            class="product"
+            data-id="8"
+            data-name="macbook"
+            data-category="notebooks"
+            data-price="119999"
+            data-image="./imagenes/macbook.jpg"
+            data-star="4"
+          >
             <div class="product-img">
-              <img src="./imagenes/macbook.jpg" alt="" class="img" />
+              <img src="./imagenes/macbook.jpg" alt="macbook" class="img" />
             </div>
             <div class="product-data">
               <div class="product-content">
                 <h3 class="product-name">Macbook</h3>
                 <p class="product-price">$ 119999</p>
+                <p class="product-description-list">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Ipsum a sunt exercitationem eaque quaerat, minus eum animi!
+                  Sed, sapiente quam sequi necessitatibus aliquam itaque
+                  quisquam natus eveniet eligendi voluptatibus quaerat!
+                </p>
                 <div class="product-starts">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
                 </div>
               </div>
               <div class="product-sale">
@@ -447,20 +632,38 @@
               </div>
             </div>
           </article>
-          <article class="product">
+          <article
+            class="product"
+            data-id="9"
+            data-name="iphone"
+            data-category="celulares"
+            data-price="79999"
+            data-image="./imagenes/iphone.png"
+            data-star="3"
+          >
             <div class="product-img">
-              <img src="./imagenes/iphone.png" alt="" class="img" />
+              <img
+                src="./imagenes/iphone.png"
+                alt="iphone celular"
+                class="img"
+              />
             </div>
             <div class="product-data">
               <div class="product-content">
                 <h3 class="product-name">iPhone</h3>
                 <p class="product-price">$ 79999</p>
+                <p class="product-description-list">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Ipsum a sunt exercitationem eaque quaerat, minus eum animi!
+                  Sed, sapiente quam sequi necessitatibus aliquam itaque
+                  quisquam natus eveniet eligendi voluptatibus quaerat!
+                </p>
                 <div class="product-starts">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <i class="far fa-star"></i>
                 </div>
               </div>
               <div class="product-sale">
@@ -470,20 +673,38 @@
               </div>
             </div>
           </article>
-          <article class="product">
+          <article
+            class="product"
+            data-id="10"
+            data-name="xbox one"
+            data-category="consolas"
+            data-price="69999"
+            data-image="./imagenes/Xbox-One-S-oferta.jpg"
+            data-star="4"
+          >
             <div class="product-img">
-              <img src="./imagenes/Xbox-One-S-oferta.jpg" alt="" class="img" />
+              <img
+                src="./imagenes/Xbox-One-S-oferta.jpg"
+                alt="consola xbox one"
+                class="img"
+              />
             </div>
             <div class="product-data">
               <div class="product-content">
                 <h3 class="product-name">Xbox One</h3>
                 <p class="product-price">$ 69999</p>
+                <p class="product-description-list">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Ipsum a sunt exercitationem eaque quaerat, minus eum animi!
+                  Sed, sapiente quam sequi necessitatibus aliquam itaque
+                  quisquam natus eveniet eligendi voluptatibus quaerat!
+                </p>
                 <div class="product-starts">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
                 </div>
               </div>
               <div class="product-sale">
@@ -493,14 +714,32 @@
               </div>
             </div>
           </article>
-          <article class="product">
+          <article
+            class="product"
+            data-id="11"
+            data-name="mouse gamer"
+            data-category="accesorios"
+            data-price="4999"
+            data-image="./imagenes/Mouse Gamer.jpg"
+            data-star="5"
+          >
             <div class="product-img">
-              <img src="./imagenes/Mouse Gamer.jpg" alt="" class="img" />
+              <img
+                src="./imagenes/Mouse Gamer.jpg"
+                alt="mouse gamer"
+                class="img"
+              />
             </div>
             <div class="product-data">
               <div class="product-content">
                 <h3 class="product-name">Mouse Gamer</h3>
                 <p class="product-price">$4999</p>
+                <p class="product-description-list">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Ipsum a sunt exercitationem eaque quaerat, minus eum animi!
+                  Sed, sapiente quam sequi necessitatibus aliquam itaque
+                  quisquam natus eveniet eligendi voluptatibus quaerat!
+                </p>
                 <div class="product-starts">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
@@ -532,5 +771,6 @@
         <p>ADA SHOP - Gracias por visitarnos 💜DEBI</p>
       </div>
     </footer>
+    <script src="index.js"></script>
   </body>
 </html>
