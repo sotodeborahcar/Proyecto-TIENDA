@@ -1,5 +1,9 @@
 # Proyecto: Tienda 🛍
 
+### Puede acceder a la pagina desde el siguiente link:
+
+[TIENDA](https://tienda-debito.netlify.app)
+
 ![Design preview for the Base Apparel coming soon page coding challenge](./imagenes/proyecto-imagen.jpg)
 
 ## Bienvenidos! 👋
