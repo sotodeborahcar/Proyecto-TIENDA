@@ -28,7 +28,7 @@
     <header class="main-header">
       <!-- seccion header-navegacion -->
       <div class="main-header-nav">
-        <div class="nav-logo">
+        <div class="nav-logo" aria-labelledby="logo-descripcion">
           <img
             src="./imagenes/2_pC4Rmxr91qNGFurf7jdDaw.svg"
             alt="logo ada shop"
@@ -37,14 +37,20 @@
           <p>ADA SHOP</p>
         </div>
         <div class="nav-button">
-          <button type="button" class="btn-cart">
-            <i class="fas fa-shopping-cart"></i>
+          <button
+            type="button"
+            class="btn-cart"
+            aria-label="contenido del carrito"
+          >
+            <i class="fas fa-shopping-cart" aria-hidden="true"></i>Carrito
+            (<span class="carrito-contador">0 items</span>)
           </button>
         </div>
       </div>
       <!-- seccion header-presentacion -->
       <div class="main-header-container">
         <h1>ELECTRÓNICA</h1>
+        <div class="overlay-header-banner"></div>
       </div>
     </header>
 
@@ -52,7 +58,17 @@
 
     <main>
       <!-- seccion filtros-aside -->
-      <section class="filters">
+      <div class="overlay aside-filtros hidden" aria-hidden="true"></div>
+      <section class="filters" aria-labelledby="seccion-filtros">
+        <!-- <div>
+          <button
+            type="button"
+            class="aside-filtro boton-cerrar-filtro"
+            aria-label="cerrar seccion filtros"
+          >
+            <i class="fas fa-times" aria-hidden="true"></i>
+          </button>
+        </div> -->
         <form action="" method="GET">
           <div class="filter-container">
             <div class="filter-container-main">
@@ -233,10 +249,13 @@
       </section>
 
       <!-- seccion tarjetas de productos -->
+
+      <!-- sector de barra de productos -->
       <section class="article">
         <div class="article-barra">
           <p class="prod-cantidad" aria-live="mostrar">
-            Mostrando 12 producto(s) de 12
+            Mostrando <span class="prod-mostrados">12</span> producto(s) de
+            <span class="prod-totales">12</span>
           </p>
           <div class="barra-dezplegable">
             <p
@@ -245,10 +264,18 @@
             >
               Ver como
             </p>
-            <button type="button" class="btn-desplegable">
+            <button
+              type="button"
+              class="btn-desplegable cuadricula"
+              aria-label="ver como cuadricula"
+            >
               <i class="fas fa-th" aria-hidden="true" title="cuadricula"></i>
             </button>
-            <button type="button" class="btn-desplegable">
+            <button
+              type="button"
+              class="btn-desplegable lista"
+              aria-label="ver como lista"
+            >
               <i class="fas fa-list" aria-hidden="true" title="lista"></i>
             </button>
           </div>
@@ -256,15 +283,13 @@
             type="button"
             class="open-boton-filter"
             aria-label="abrir filtros"
-            aria-expanded="false"
-            aria-controls="filter"
           >
             <i class="fas fa-filter" aria-hidden="true"></i>
             Filtros
           </button>
         </div>
-
-        <div class="article-products art-mosaico">
+        <!-- sector de productos -->
+        <div class="article-products">
           <article
             class="product"
             data-id="0"
@@ -287,13 +312,13 @@
                 <p class="product-price" aria-label="precio en pesos">
                   $ 22499
                 </p>
-                <p class="product-description-list">
+                <p class="product-description-list hidden">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Ipsum a sunt exercitationem eaque quaerat, minus eum animi!
                   Sed, sapiente quam sequi necessitatibus aliquam itaque
                   quisquam natus eveniet eligendi voluptatibus quaerat!
                 </p>
-                <div class="product-starts">
+                <div class="product-starts" aria-label="puntaje de 3 estrellas">
                   <i class="fas fa-star" aria-hidden="true"></i>
                   <i class="fas fa-star" aria-hidden="true"></i>
                   <i class="fas fa-star" aria-hidden="true"></i>
@@ -302,7 +327,15 @@
                 </div>
               </div>
               <div class="product-sale">
-                <button type="button" class="button button-sale" id="0">
+                <button
+                  type="button"
+                  class="button button-sale"
+                  data-name="celular xiaomi"
+                  data-price="22499"
+                  data-image="./imagenes/Celular Xiaomi Redmi Note 8.jpeg"
+                  data-cantidad="1"
+                  id="0"
+                >
                   COMPRAR
                 </button>
               </div>
@@ -328,13 +361,13 @@
               <div class="product-content">
                 <h3 class="product-name">PlayStation 4</h3>
                 <p class="product-price">$ 59999</p>
-                <p class="product-description-list">
+                <p class="product-description-list hidden">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Ipsum a sunt exercitationem eaque quaerat, minus eum animi!
                   Sed, sapiente quam sequi necessitatibus aliquam itaque
                   quisquam natus eveniet eligendi voluptatibus quaerat!
                 </p>
-                <div class="product-starts">
+                <div class="product-starts" aria-label="puntaje de 5 estrellas">
                   <i class="fas fa-star" aria-hidden="true"></i>
                   <i class="fas fa-star" aria-hidden="true"></i>
                   <i class="fas fa-star" aria-hidden="true"></i>
@@ -343,7 +376,15 @@
                 </div>
               </div>
               <div class="product-sale">
-                <button type="button" class="button button-sale" id="1">
+                <button
+                  type="button"
+                  class="button button-sale"
+                  data-name="playstation 4"
+                  data-price="59999"
+                  data-image="./imagenes/playstation4.jpg"
+                  data-cantidad="1"
+                  id="1"
+                >
                   COMPRAR
                 </button>
               </div>
@@ -371,13 +412,13 @@
                 <p class="product-price" aria-label="precio en pesos">
                   $ 54999
                 </p>
-                <p class="product-description-list">
+                <p class="product-description-list hidden">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Ipsum a sunt exercitationem eaque quaerat, minus eum animi!
                   Sed, sapiente quam sequi necessitatibus aliquam itaque
                   quisquam natus eveniet eligendi voluptatibus quaerat!
                 </p>
-                <div class="product-starts">
+                <div class="product-starts" aria-label="puntaje de 2 estrellas">
                   <i class="fas fa-star" aria-hidden="true"></i>
                   <i class="fas fa-star" aria-hidden="true"></i>
                   <i class="far fa-star" aria-hidden="true"></i>
@@ -386,7 +427,15 @@
                 </div>
               </div>
               <div class="product-sale">
-                <button type="button" class="button button-sale" id="2">
+                <button
+                  type="button"
+                  class="button button-sale"
+                  data-name="camara nikon"
+                  data-price="54999"
+                  data-image="../imagenes/camara Nikon.jpg"
+                  data-cantidad="1"
+                  id="2"
+                >
                   COMPRAR
                 </button>
               </div>
@@ -414,13 +463,13 @@
                 <p class="product-price" aria-label="precio en pesos">
                   $ 24999
                 </p>
-                <p class="product-description-list">
+                <p class="product-description-list hidden">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Ipsum a sunt exercitationem eaque quaerat, minus eum animi!
                   Sed, sapiente quam sequi necessitatibus aliquam itaque
                   quisquam natus eveniet eligendi voluptatibus quaerat!
                 </p>
-                <div class="product-starts">
+                <div class="product-starts" aria-label="puntaje de 3 estrellas">
                   <i class="fas fa-star" aria-hidden="true"></i>
                   <i class="fas fa-star" aria-hidden="true"></i>
                   <i class="fas fa-star" aria-hidden="true"></i>
@@ -429,7 +478,15 @@
                 </div>
               </div>
               <div class="product-sale">
-                <button type="button" class="button button-sale" id="3">
+                <button
+                  type="button"
+                  class="button button-sale"
+                  data-name="headphones sony"
+                  data-price="24999"
+                  data-image="./imagenes/headphones Sony.jpg"
+                  data-cantidad="1"
+                  id="3"
+                >
                   COMPRAR
                 </button>
               </div>
@@ -455,13 +512,13 @@
               <div class="product-content">
                 <h3 class="product-name">Nintendo Switch</h3>
                 <p class="product-price">$ 46999</p>
-                <p class="product-description-list">
+                <p class="product-description-list hidden">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Ipsum a sunt exercitationem eaque quaerat, minus eum animi!
                   Sed, sapiente quam sequi necessitatibus aliquam itaque
                   quisquam natus eveniet eligendi voluptatibus quaerat!
                 </p>
-                <div class="product-starts">
+                <div class="product-starts" aria-label="puntaje de 5 estrellas">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
@@ -470,7 +527,14 @@
                 </div>
               </div>
               <div class="product-sale">
-                <button type="button" class="button button-sale">
+                <button
+                  type="button"
+                  class="button button-sale"
+                  data-name="nintendo switch"
+                  data-price="46999"
+                  data-image="./imagenes/Nintendo Switch.jpg"
+                  data-cantidad="1"
+                >
                   COMPRAR
                 </button>
               </div>
@@ -496,13 +560,13 @@
               <div class="product-content">
                 <h3 class="product-name">Notebook Asus</h3>
                 <p class="product-price">$ 32999</p>
-                <p class="product-description-list">
+                <p class="product-description-list hidden">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Ipsum a sunt exercitationem eaque quaerat, minus eum animi!
                   Sed, sapiente quam sequi necessitatibus aliquam itaque
                   quisquam natus eveniet eligendi voluptatibus quaerat!
                 </p>
-                <div class="product-starts">
+                <div class="product-starts" aria-label="puntaje de 1 estrella">
                   <i class="fas fa-star"></i>
                   <i class="far fa-star"></i>
                   <i class="far fa-star"></i>
@@ -511,7 +575,14 @@
                 </div>
               </div>
               <div class="product-sale">
-                <button type="button" class="button button-sale">
+                <button
+                  type="button"
+                  class="button button-sale"
+                  data-name="notebook asus"
+                  data-price="32999"
+                  data-image="./imagenes/notebook Asus.jpg"
+                  data-cantidad="1"
+                >
                   COMPRAR
                 </button>
               </div>
@@ -537,13 +608,13 @@
               <div class="product-content">
                 <h3 class="product-name">Notebook MSI</h3>
                 <p class="product-price">$ 37999</p>
-                <p class="product-description-list">
+                <p class="product-description-list hidden">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Ipsum a sunt exercitationem eaque quaerat, minus eum animi!
                   Sed, sapiente quam sequi necessitatibus aliquam itaque
                   quisquam natus eveniet eligendi voluptatibus quaerat!
                 </p>
-                <div class="product-starts">
+                <div class="product-starts" aria-label="puntaje de 3 estrellas">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
@@ -552,7 +623,14 @@
                 </div>
               </div>
               <div class="product-sale">
-                <button type="button" class="button button-sale">
+                <button
+                  type="button"
+                  class="button button-sale"
+                  data-name="notebook msi"
+                  data-price="37999"
+                  data-image="./imagenes/notebook MSI.jpg"
+                  data-cantidad="1"
+                >
                   COMPRAR
                 </button>
               </div>
@@ -578,13 +656,13 @@
               <div class="product-content">
                 <h3 class="product-name">Headphones Philips</h3>
                 <p class="product-price">$ 11999</p>
-                <p class="product-description-list">
+                <p class="product-description-list hidden">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Ipsum a sunt exercitationem eaque quaerat, minus eum animi!
                   Sed, sapiente quam sequi necessitatibus aliquam itaque
                   quisquam natus eveniet eligendi voluptatibus quaerat!
                 </p>
-                <div class="product-starts">
+                <div class="product-starts" aria-label="puntaje de 2 estrellas">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="far fa-star"></i>
@@ -593,7 +671,14 @@
                 </div>
               </div>
               <div class="product-sale">
-                <button type="button" class="button button-sale">
+                <button
+                  type="button"
+                  class="button button-sale"
+                  data-name="headphones philips"
+                  data-price="11999"
+                  data-image="./imagenes/Headphones Philips.jpg"
+                  data-cantidad="1"
+                >
                   COMPRAR
                 </button>
               </div>
@@ -615,13 +700,13 @@
               <div class="product-content">
                 <h3 class="product-name">Macbook</h3>
                 <p class="product-price">$ 119999</p>
-                <p class="product-description-list">
+                <p class="product-description-list hidden">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Ipsum a sunt exercitationem eaque quaerat, minus eum animi!
                   Sed, sapiente quam sequi necessitatibus aliquam itaque
                   quisquam natus eveniet eligendi voluptatibus quaerat!
                 </p>
-                <div class="product-starts">
+                <div class="product-starts" aria-label="puntaje de 4 estrellas">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
@@ -630,7 +715,14 @@
                 </div>
               </div>
               <div class="product-sale">
-                <button type="button" class="button button-sale">
+                <button
+                  type="button"
+                  class="button button-sale"
+                  data-name="macbook"
+                  data-price="119999"
+                  data-image="./imagenes/macbook.jpg"
+                  data-cantidad="1"
+                >
                   COMPRAR
                 </button>
               </div>
@@ -656,13 +748,16 @@
               <div class="product-content">
                 <h3 class="product-name">iPhone</h3>
                 <p class="product-price">$ 79999</p>
-                <p class="product-description-list">
+                <p class="product-description-list hidden">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Ipsum a sunt exercitationem eaque quaerat, minus eum animi!
                   Sed, sapiente quam sequi necessitatibus aliquam itaque
                   quisquam natus eveniet eligendi voluptatibus quaerat!
                 </p>
-                <div class="product-starts">
+                <div
+                  class="product-starts"
+                  aria-label="puntalle de 3 estrellas"
+                >
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
@@ -671,7 +766,14 @@
                 </div>
               </div>
               <div class="product-sale">
-                <button type="button" class="button button-sale">
+                <button
+                  type="button"
+                  class="button button-sale"
+                  data-name="iphone"
+                  data-price="79999"
+                  data-image="./imagenes/iphone.png"
+                  data-cantidad="1"
+                >
                   COMPRAR
                 </button>
               </div>
@@ -697,13 +799,13 @@
               <div class="product-content">
                 <h3 class="product-name">Xbox One</h3>
                 <p class="product-price">$ 69999</p>
-                <p class="product-description-list">
+                <p class="product-description-list hidden">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Ipsum a sunt exercitationem eaque quaerat, minus eum animi!
                   Sed, sapiente quam sequi necessitatibus aliquam itaque
                   quisquam natus eveniet eligendi voluptatibus quaerat!
                 </p>
-                <div class="product-starts">
+                <div class="product-starts" aria-label="puntaje de 4 estrellas">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
@@ -712,7 +814,14 @@
                 </div>
               </div>
               <div class="product-sale">
-                <button type="button" class="button button-sale">
+                <button
+                  type="button"
+                  class="button button-sale"
+                  data-name="xbox one"
+                  data-price="69999"
+                  data-image="./imagenes/Xbox-One-S-oferta.jpg"
+                  data-cantidad="1"
+                >
                   COMPRAR
                 </button>
               </div>
@@ -738,13 +847,13 @@
               <div class="product-content">
                 <h3 class="product-name">Mouse Gamer</h3>
                 <p class="product-price">$4999</p>
-                <p class="product-description-list">
+                <p class="product-description-list hidden">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Ipsum a sunt exercitationem eaque quaerat, minus eum animi!
                   Sed, sapiente quam sequi necessitatibus aliquam itaque
                   quisquam natus eveniet eligendi voluptatibus quaerat!
                 </p>
-                <div class="product-starts">
+                <div class="product-starts" aria-label="puntaje de 5 estrellas">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
@@ -753,7 +862,14 @@
                 </div>
               </div>
               <div class="product-sale">
-                <button type="button" class="button button-sale">
+                <button
+                  type="button"
+                  class="button button-sale"
+                  data-name="mouse gamer"
+                  data-price="4999"
+                  data-image="./imagenes/Mouse Gamer.jpg"
+                  data-cantidad="1"
+                >
                   COMPRAR
                 </button>
               </div>
@@ -766,15 +882,178 @@
     <!-- 👻seccion footer -->
 
     <footer>
-      <div class="logo-footer">
+      <div class="logo-footer" aria-labelledby="footer informacion">
         <img
           src="./imagenes/2_pC4Rmxr91qNGFurf7jdDaw.svg"
-          alt=""
+          alt="logo de la tienda"
           class="logo"
         />
         <p>ADA SHOP - Gracias por visitarnos 💜DEBI</p>
       </div>
     </footer>
+
+    <!--👻 SECCION CARRITO -->
+
+    <div class="overlay sidebars hidden" aria-hidden="true"></div>
+
+    <!-- overlay para sidebars -->
+
+    <section class="seccion-carrito" aria-labelledby="seccion-carrito">
+      <header class="contenedor-titulo-carrito">
+        <h2 class="carrito-titulo">Carrito</h2>
+        <button
+          type="button"
+          class="carrito boton-cerrar"
+          aria-label="cerrar carrito"
+        >
+          <i class="fas fa-times" aria-hidden="true"></i>
+        </button>
+      </header>
+
+      <div class="contenedor-carrito-vacio hidden"></div>
+      <div class="contenedor-carrito-lleno hidden">
+        <p class="mensaje-carrito-lleno">
+          <span class="cant-prod-carrito">2</span> producto/s agregado/s
+        </p>
+
+        <div class="cant-productos-agregados"></div>
+        <!-- sector de agregado de productos al checkout como tarjeta -->
+
+        <div class="cont-carrito-botones">
+          <p>Subtotal <span class="valor-subtotal-carrito"></span></p>
+          <button type="button" class="btn-comprar carrito">COMPRAR</button>
+          <button type="button" class="btn-vaciar carrito">VACIAR</button>
+        </div>
+      </div>
+    </section>
+
+    <!--👻  seccion popup -->
+
+    <div class="overlay popups hidden">
+      <!-- overlay con mensaje advertencia de vaciar carrito-->
+      <div
+        class="mensaje vaciar-contenido-carrito hidden"
+        aria-describedby="mensaje-vaciar-carrito"
+      >
+        <p class="mensaje-vaciar">
+          Esta por vaciar el carrito, ¿quiere continuar?
+        </p>
+        <div class="vaciar-carrito btn-opcion">
+          <button type="button" class="btn-opcion-cancelar">CANCELAR</button>
+          <button type="button" class="btn-vaciar confirmar-vaciar">
+            VACIAR
+          </button>
+        </div>
+      </div>
+      <!-- sector de checkout del carrito -->
+      <section
+        class="mensaje checkout-seccion hidden"
+        aria-labelledby="mensaje-checkout"
+      >
+        <h2 class="checkout-titulo">Checkout</h2>
+        <div class="checkout-form">
+          <form action="" class="formulario" id="checkout-form">
+            <div
+              class="form-datos-personales"
+              aria-labelledby="datos-personales"
+            >
+              <h3 class="datos-personales-titulo">Datos Personales</h3>
+              <div class="datos-personales">
+                <label class="datos-nombre-apellido" for="nombre-apellido"
+                  >Nombre y Apellido*<input
+                    type="text"
+                    id="nombre-apellido"
+                    placeholder="p. ej.:Coco Loco"
+                    name="nombre y apellido"
+                    required
+                /></label>
+                <label class="datos-email" for="email"
+                  >Email*
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="p.ej.:cocoloco@gmail.com"
+                    name="email"
+                    required
+                /></label>
+              </div>
+            </div>
+            <div class="form-opciones-pago" aria-labelledby="opciones-pago">
+              <h3 class="opciones-pago-titulo">Opciones de Pago</h3>
+              <div class="opciones-pago">
+                <label for="opc-pago-cash"
+                  ><input
+                    class="opc-pago"
+                    id="opc-pago-cash"
+                    type="radio"
+                    name="opc-pago"
+                    value="efectivo o debito"
+                    checked
+                  />
+                  Efectivo / Débito</label
+                >
+                <label for="opc-pago-credito">
+                  <input
+                    type="radio"
+                    class="opc-pago"
+                    id="opc-pago-credito"
+                    name="opc-pago"
+                    value="tarjeta de credito"
+                  />Tarjeta de credito
+                </label>
+                <label for="opc-envio">
+                  <input
+                    type="checkbox"
+                    class="opc-pago"
+                    id="opc-envio"
+                    name="opc-envio"
+                  />Necesito envío
+                </label>
+                <label for="opc-descuento">
+                  <input
+                    type="checkbox"
+                    class="opc-pago"
+                    id="opc-descuento"
+                    name="opc-descuento"
+                  />Tengo tarjeta de descuento
+                </label>
+              </div>
+            </div>
+          </form>
+
+          <div class="checkout-resumen-contenedor">
+            <h3>Resumen</h3>
+            <div>
+              <p class="checkout-resumen p-subtotal">
+                Subtotal <span class="subtotal-valor"></span>
+              </p>
+              <p class="checkout-resumen p-descuento con-descuento hidden">
+                Descuento 10% <span class="descuento-valor"></span>
+              </p>
+              <p class="checkout-resumen p-envio hidden">
+                Envio <span class="envio-valor"></span>
+              </p>
+              <p class="checkout-resumen p-recargo con-recargo hidden">
+                Recargo <span class="recargo-valor"></span>
+              </p>
+              <p class="checkout-resumen p-total">
+                Total <span class="total-valor"></span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="checkout btn-acciones">
+          <button class="btn-seguir-comprando" type="button">
+            SEGUIR COMPRANDO
+          </button>
+          <button class="btn-finalizar" type="submit" form="checkout-form">
+            FINALIZAR
+          </button>
+        </div>
+      </section>
+    </div>
+
     <script src="index.js"></script>
   </body>
 </html>
