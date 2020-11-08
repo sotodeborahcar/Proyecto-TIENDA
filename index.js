@@ -1,6 +1,6 @@
 // ===> 👀 👀 👀 DECLARACION DE VARIABLES 👀 👀 👀 <===
 
-const filtroBusqueda = document.querySelector("#filtro"); // = filtroNombre
+const filtroBusqueda = document.querySelector("#filtro");
 const tarjetas = document.getElementsByClassName("product");
 const filtroRating = document.getElementsByClassName("start-filter");
 const checkboxes = document.querySelectorAll(".start-filter");
@@ -21,20 +21,20 @@ const descripcionProductos = document.querySelectorAll(
 
 // ===> variable tranformaciones:
 
-const body = document.body; //11
-const overlaySidebars = document.querySelector(".overlay.sidebars"); //25
-const ventanaCarrito = document.querySelector(".seccion-carrito"); // 12
-const botonAbrirCheckout = document.querySelector(".btn-comprar.carrito"); //15
-const overlayPopups = document.querySelector(".overlay.popups"); //16
-const mensajeCheckout = document.querySelector(".checkout-seccion"); //17
-const btnVaciarCarrito = document.querySelector(".btn-vaciar.carrito"); //18
+const body = document.body;
+const overlaySidebars = document.querySelector(".overlay.sidebars");
+const ventanaCarrito = document.querySelector(".seccion-carrito");
+const botonAbrirCheckout = document.querySelector(".btn-comprar.carrito");
+const overlayPopups = document.querySelector(".overlay.popups");
+const mensajeCheckout = document.querySelector(".checkout-seccion");
+const btnVaciarCarrito = document.querySelector(".btn-vaciar");
 const mensajeVaciarCarrito = document.querySelector(
   ".vaciar-contenido-carrito"
-); //19
-const btnCancelarVaciarCarrito = document.querySelector(".btn-opcion-cancelar"); //20
+);
+const btnCancelarVaciarCarrito = document.querySelector(".btn-opcion-cancelar");
 const btnConfirmarVaciarCarrito = document.querySelector(
   ".btn-vaciar.confirmar-vaciar"
-); //21
+);
 
 // ==> variables carrito
 
@@ -54,25 +54,24 @@ const productosAgregadosCarrito = document.querySelectorAll(
 ); //===> se agrega la clase al boton: COMPRAR de cada article para que cuando se haga clic aparezca en el checkout
 const contadorProductosHeader = document.querySelector(".carrito-contador");
 const contadorProductosCarrito = document.querySelector(".cant-prod-carrito");
-const btnSeguirComprando = document.querySelector(".btn-seguir-comprando"); //22
+const btnSeguirComprando = document.querySelector(".btn-seguir-comprando");
 
 // ===> variables checkout:
 
-const subtotal = document.querySelector(".subtotal-valor"); //41
-const descuento = document.querySelector(".descuento-valor"); //42
-const envio = document.querySelector(".envio-valor"); //43
-const recargo = document.querySelector(".recargo-valor"); //44
-const total = document.querySelector(".total-valor"); //45
-const opcionesPago = document.querySelectorAll(".opc-pago"); //46
-//
-const opcionPagoCredito = document.querySelector("#opc-pago-credito"); //49
-const opcionEnvio = document.querySelector("#opc-envio"); //50
-const opcionDescuento = document.querySelector("#opc-descuento"); //51
+const subtotal = document.querySelector(".subtotal-valor");
+const descuento = document.querySelector(".descuento-valor");
+const envio = document.querySelector(".envio-valor");
+const recargo = document.querySelector(".recargo-valor");
+const total = document.querySelector(".total-valor");
+const opcionesPago = document.querySelectorAll(".opc-pago");
+const opcionPagoCredito = document.querySelector("#opc-pago-credito");
+const opcionEnvio = document.querySelector("#opc-envio");
+const opcionDescuento = document.querySelector("#opc-descuento");
 const mensajeDescuento = document.querySelector(
   ".checkout-resumen.p-descuento"
-); //52
-const mensajeEnvio = document.querySelector(".checkout-resumen.p-envio"); //54
-const mensajeRecargo = document.querySelector(".checkout-resumen.p-recargo"); //53
+);
+const mensajeEnvio = document.querySelector(".checkout-resumen.p-envio");
+const mensajeRecargo = document.querySelector(".checkout-resumen.p-recargo");
 
 // 😅 RESOLUCION DE FUNCIONES =====>
 
@@ -128,16 +127,6 @@ const inputCoincideConNombre = (tarjeta) => {
     return false;
   }
 };
-
-// for (let tarjeta of tarjetas) {
-//   const titulo = tarjeta.dataset.name;
-//   const busqueda = filtroBusqueda.value;
-//   if (titulo.includes(busqueda)) {
-//     tarjeta.classList.remove("hidden");
-//   } else {
-//     tarjeta.classList.add("hidden");
-//   }
-// }
 
 // estandarizar la constante filtrarTarjetas:
 
@@ -211,34 +200,6 @@ const coincidenCheckboxRatingYTarjeta = (tarjeta) => {
   return false;
 };
 
-//filtros por checkbox-rating otra forma:
-
-// const filtrarPorRating = () => {
-//   for (let tarjeta of tarjetas) {
-//     tarjeta.classList.add("hidden");
-//     if (CheckboxSeleccionado()) {
-//       if (coincidenCheckboxYTarjeta(tarjeta)) {
-//         tarjeta.classList.remove("hidden");
-//       }
-//     } else {
-//       tarjeta.classList.add("hidden");
-//     }
-//   }
-// };
-
-// const filtrarTarjetas = () => {
-//   for (let tarjeta of tarjetas) {
-//     tarjeta.classList.add(`hidden`);
-//     if (hayCheckboxSeleccionado()) {
-//       if (coincidenCheckboxYTarjeta(tarjeta)) {
-//         tarjeta.classList.remove(`hidden`);
-//       }
-//     } else {
-//       tarjeta.classList.remove("hidden");
-//     }
-//   }
-// };
-
 // 🙈 FILTRAR POR CATEGORIA:
 
 for (let checkbox of filtroCategoria) {
@@ -277,19 +238,6 @@ const coincidenCheckboxCategoriaYTarjeta = (tarjeta) => {
   }
   return false;
 };
-
-// const filtrarTarjetas2 = () => {
-//   for (let tarjeta of tarjetas) {
-//     tarjeta.classList.add(`hidden`);
-//     if (checkboxCategoriaSeleccionado()) {
-//       if (coincidenCheckboxCategoriaYTarjeta(tarjeta)) {
-//         tarjeta.classList.remove(`hidden`);
-//       }
-//     } else {
-//       tarjeta.classList.remove("hidden");
-//     }
-//   }
-// };
 
 //MOSTRAR LA CANTIDAD DE PRODUCTOS SELECCIONADOS:
 
@@ -365,7 +313,19 @@ btnConfirmarVaciarCarrito.onclick = () => {
   mensajeCarritoVacio.classList.remove("hidden");
   mensajeCarritoVacio.textContent = `No tiene productos en el carrito, ¡agregue alguno!`;
   contadorProductosHeader.textContent = `${`0 items`}`;
+  eliminarProductos();
   botonCerrarCarrito.focus();
+};
+
+const eliminarProductos = () => {
+  const productosAgregadosCarrito = document.querySelectorAll(
+    ".producto-agregado"
+  );
+  for (let producto of productosAgregadosCarrito) {
+    producto.classList.remove("producto-agregado");
+  }
+  contenidoCarritoLleno.innerHTML = eliminarTarjetaDeCarrito();
+  actualizarContenidoCarrito();
 };
 
 // 😅 TRANSFORMACIONES DEL CARRITO ==>
@@ -410,7 +370,7 @@ const actualizarFuncionesCarrito = () => {
 const actualizarContenidoCarrito = () => {
   const productosAgregadosCarrito = document.querySelectorAll(
     ".producto-agregado"
-  ); //ver
+  );
 
   if (productosAgregadosCarrito.length === 0) {
     mensajeCarritoVacio.classList.remove("hidden");
@@ -604,7 +564,7 @@ let costoEnvio;
 
 const conEnvio = () => {
   if (opcionEnvio.checked) {
-    costoEnvio = 300;
+    costoEnvio = 500;
     envio.textContent = `${`$`}${costoEnvio}`;
     mensajeEnvio.classList.remove("hidden");
   } else {
@@ -629,4 +589,49 @@ const conTarjetaDescuento = () => {
     mensajeDescuento.classList.add("hidden");
   }
   return valorDescuento;
+};
+
+// FUNCIONES PARA BOTON FILTRO EN RESPONSIVE:
+
+const focusEnElementosDelFiltro = document.querySelectorAll(
+  ".filters button, input"
+);
+const botonCerrarFiltro = document.querySelector(
+  ".aside-filter.boton-close-filter"
+);
+const botonFiltroResponsive = document.querySelector(".open-boton-filter");
+const asideFiltroResponsive = document.querySelector(".filters");
+
+const ventanaResponsive = window.matchMedia("(max-width: 850px)");
+
+if (ventanaResponsive.matches) {
+  botonFiltroResponsive.setAttribute("tabindex", "0");
+
+  for (let elemento of focusEnElementosDelFiltro) {
+    elemento.setAttribute("tabindex", "-1");
+  }
+}
+
+botonFiltroResponsive.onclick = () => {
+  overlaySidebars.classList.remove("hidden");
+  asideFiltroResponsive.classList.add("open");
+  asideFiltroResponsive.setAttribute("aria-modal", true);
+  asideFiltroResponsive.setAttribute("role", "dialog");
+  asideFiltroResponsive.removeAttribute("aria-hidden");
+  body.classList.add("no-scroll");
+  botonCerrarFiltro.focus();
+
+  for (let elemento of focusEnElementosDelFiltro) {
+    elemento.setAttribute("tabindex", "0");
+  }
+};
+
+botonCerrarFiltro.onclick = () => {
+  overlaySidebars.classList.add("hidden");
+  asideFiltroResponsive.classList.remove("open");
+  asideFiltroResponsive.removeAttribute("aria-modal");
+  asideFiltroResponsive.removeAttribute("role");
+  asideFiltroResponsive.setAttribute("aria-hidden", true);
+  body.classList.remove("no-scroll");
+  botonFiltroResponsive.focus();
 };
